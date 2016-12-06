@@ -33,7 +33,7 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
-ve/
+venv/
 logs/*.log
 *.pid
 
