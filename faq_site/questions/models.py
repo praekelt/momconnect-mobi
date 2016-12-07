@@ -1,3 +1,18 @@
 from django.db import models
 
-# Create your models here.
+
+class Catagory(models.Model):
+    catagory_title = models.CharField(max_length=250)
+    catagory_logo = models.ImageField()
+
+    def __str__(self):
+        return self.catagory_title
+
+
+class QandA(models.Model):
+    catagory = models.ForeignKey(Catagory, on_delete=models.CASCADE)
+    question = models.CharField(max_length=255)
+    answer = models.TextField()
+
+    def __str__(self):
+        return self.question
