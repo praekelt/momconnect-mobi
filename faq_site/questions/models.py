@@ -6,7 +6,7 @@ class Catagory(models.Model):
     catagory_logo = models.FileField()
 
     def __str__(self):
-        return catagory_title
+        return self.catagory_title
 
 
 class QandA(models.Model):
