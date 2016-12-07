@@ -11,8 +11,8 @@ class Catagory(models.Model):
 
 class QandA(models.Model):
     catagory = models.ForeignKey(Catagory, on_delete=models.CASCADE)
-    question = models.TextField(max_length=50)
-    answer = models.TextField(max_length=1000)
+    question = models.CharField(max_length=255)
+    answer = models.TextField()
 
     def __str__(self):
         return self.question
