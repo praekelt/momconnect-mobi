@@ -1,0 +1,5 @@
+<ul>
+  {% for catagory in all_catagories %}
+  <li><a href="/questions/{{catagory.catagory_title}}">{{catagory.catagory_title}}</a></li>
+  {% endfor %}
+</ul>

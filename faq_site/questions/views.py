@@ -10,11 +10,7 @@ def home(request):
 
 def index(request):
     all_catagories = Catagory.objects.all()
-    html = ''
-    for catagory in all_catagories:
-        url ='/questions/' + str(catagory.catagory_title) + '/'
-        html += '<a href="' + url +'">' + catagory.catagory_title + '</a><br>'
-    return HttpResponse(html)
+    return render(request, 'questions/index.html', {'all_catagories': all_catagories})
 
 
 def questions(request, catagory_name):
