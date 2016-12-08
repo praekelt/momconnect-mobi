@@ -21,5 +21,6 @@ def questions(request, catagory_name):
 
 
 def answers(request, catagory_name, question_id):
-    return HttpResponse("This page with display "
-                        "individual question answer pairs")
+    catagory=Catagory.objects.get(catagory_title=catagory_name)
+    question=QandA.objects.get(id=question_id)
+    return render(request, 'questions/answers.html', {'catagory': catagory, 'question': question})
