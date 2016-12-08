@@ -2,6 +2,6 @@
 <h3>Select a question below:</h3>
 <ul>
   {% for q in catagory_questions %}
-  <li><a href="/questions/{{catagory}}/{{q.question}}/">{{q.question}}</a></li>
+  <li><a href="/questions/{{catagory}}/{{q.id}}/">{{q.question}}</a></li>
   {% endfor %}
 </ul>
