@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from .models import Catagory, QandA
 
@@ -15,8 +15,7 @@ def index(request):
 
 def questions(request, catagory_name):
     # catagory_questions =
-    return HttpResponse("This page will list questions"
-                        " relating to " + catagory_name + "!")
+    return render(request, 'questions/questions.html', {'catagory_name': catagory_name})
 
 
 def answers(request, catagory_name, question_id):
