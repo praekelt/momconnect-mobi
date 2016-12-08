@@ -9,8 +9,12 @@ def home(request):
 
 
 def index(request):
-    # all_catagories = Catagory.objects.all()
-    return HttpResponse("This page will list question catagories")
+    all_catagories = Catagory.objects.all()
+    html = ''
+    for catagory in all_catagories:
+        url ='/questions/' + str(catagory.catagory_title) + '/'
+        html += '<a href="' + url +'">' + catagory.catagory_title + '</a><br>'
+    return HttpResponse(html)
 
 
 def questions(request, catagory_name):
