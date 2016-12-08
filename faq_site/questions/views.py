@@ -16,7 +16,7 @@ def index(request):
 def questions(request, catagory_name):
     # catagory_questions =
     return HttpResponse("This page will list questions"
-                        " relating to a particular catagory")
+                        " relating to " + catagory_name + "!")
 
 
 def answers(request, catagory_name, question_id):
