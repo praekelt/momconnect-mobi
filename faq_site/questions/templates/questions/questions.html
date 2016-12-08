@@ -1,2 +1,7 @@
-<h1>{{catagory_name}}</h1>
+<h1>{{catagory}}</h1>
 <h3>Select a question below:</h3>
+<ul>
+  {% for q in catagory_questions %}
+  <li><a href="/questions/{{catagory}}/{{q.question}}/">{{q.question}}</a></li>
+  {% endfor %}
+</ul>

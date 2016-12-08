@@ -14,8 +14,10 @@ def index(request):
 
 
 def questions(request, catagory_name):
-    # catagory_questions =
-    return render(request, 'questions/questions.html', {'catagory_name': catagory_name})
+    catagory=Catagory.objects.get(catagory_title=catagory_name)
+    #return HttpResponse("Displaying" + catagory.catagory_title + "!")
+    catagory_questions = catagory.qanda_set.all()
+    return render(request, 'questions/questions.html', {'catagory': catagory, 'catagory_questions': catagory_questions})
 
 
 def answers(request, catagory_name, question_id):
