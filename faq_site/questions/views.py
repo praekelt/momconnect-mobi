@@ -5,7 +5,7 @@ from .models import Catagory, QandA
 
 # Create your views here.
 def home(request):
-    return HttpResponse("This is the home page")
+    return render(request, 'questions/home.html', {})
 
 
 def index(request):
