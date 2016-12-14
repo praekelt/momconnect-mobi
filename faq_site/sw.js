@@ -1,12 +1,12 @@
 var version = 'v1';
 
 var cacheFiles = [
-  //'./',
-  //'./',
-  //'./templates/questions/answers.html',
-  //'./templates/questions/home.html',
-  //'./templates/questions/index.html',
-  //'./templates/questions/questions.html',
+  './',
+  './',
+  './templates/questions/answers.html',
+  './templates/questions/home.html',
+  './templates/questions/index.html',
+  './templates/questions/questions.html',
 ];
 
 
