@@ -1,6 +1,8 @@
 from django.conf.urls import url
 from . import views
 
+# Used flexible url regex such that administrator defined names are accepted
+
 
 urlpatterns = [
     url(r'^home/$', views.home, name='home'),
