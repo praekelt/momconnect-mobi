@@ -8,6 +8,8 @@ class Catagory(models.Model):
     def __str__(self):
         return self.catagory_title
 
+# QandA's are associated with Catagories and can have a many to one relation
+
 
 class QandA(models.Model):
     catagory = models.ForeignKey(Catagory, on_delete=models.CASCADE)
