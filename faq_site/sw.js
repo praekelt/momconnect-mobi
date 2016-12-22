@@ -57,10 +57,6 @@ self.addEventListener("activate", function(event) {
   );
 });
 
-// self.addEventListener('activate', function(event) {
-//   console.log('Activated', event);
-// });
-
 self.addEventListener('push', function(event) {
   console.log('Push message received', event);
   // TODO
