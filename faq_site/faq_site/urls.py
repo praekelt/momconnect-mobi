@@ -25,6 +25,10 @@ urlpatterns = [
     url(r'^(?P<path>.*\.js*)$', serve, {'document_root': settings.BASE_DIR}),
 ]
 
+# Allows the ability to serve static and media files from Django when
+# DEBUG = True
 if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL,
+                          document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)
